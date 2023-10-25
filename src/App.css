@@ -1,17 +1,15 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .first-page {
-  background-image: url('./Background.PNG'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
-  background-size: cover; /* This ensures the image covers the entire background */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  min-height: 100vh; /* Sets the minimum height of the background to the full viewport height */
+  background-image: 
+    linear-gradient(to top, rgba(0, 10, 31, 1), rgba(196, 35, 35, 0) 30%),
+    url('./replicate_background.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .second-page {
@@ -21,4 +19,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10% 2% 0;
+}
+
+.left-column {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 6vw;
+}
+
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FloatyMan {
+  width: 75%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
 }
