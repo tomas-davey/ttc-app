@@ -13,14 +13,14 @@
 }
 
 
-.second-page {
+/* .second-page {
   background-color: #000A1F;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .grid-container {
   display: grid;
