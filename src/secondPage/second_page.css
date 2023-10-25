@@ -1,0 +1,92 @@
+.second-page {
+    background-color: #000A1F;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-wrapper {
+    padding: 1rem;
+    color: #fff;
+    max-width: 50rem;
+    text-align: left;
+    width: 90%;
+}
+
+.second-page-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.second-page-content .spaceman-image2  {
+    height: 40vw;
+    max-height: 90vh; /* Changed from pixels to viewport height */
+    padding-right: 4rem;
+
+}
+
+.second-page-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 50vw; /* Made it relative to viewport width */
+}
+
+.grid-item {
+    /* background: #1a2a3a; */
+    color: white;
+    padding: 1rem;
+    height: 10vh;
+    display: flex;
+    align-items: flex-start; /* Align to the top */
+    gap: 1rem;
+}
+
+.grid-item-content { /* New Class */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.grid-item-logo {
+    width: 15vw; /* Relative to viewport width */
+    height: 15vw;
+    max-width: 60px; /* Ensures it doesn't get too big */
+    max-height: 60px;
+    display: block;
+    align-self: center; /* Added this to center the logo vertically */
+
+}
+.grid-item-text {
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: rem; /* Add some space between the title and description */
+}
+
+.grid-item-description {
+    font-size: 0.9rem;
+    color: #ccc;
+    max-width: 150px; /* Adjust this value based on your font size and desired appearance */
+}
+
+.features-title {
+    font-size: 8vw;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.1vw; 
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+    margin-bottom: 2rem;
+    margin-top: -10vw;
+}
