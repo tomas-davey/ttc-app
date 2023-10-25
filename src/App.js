@@ -1,4 +1,5 @@
 import './App.css';
+import SecondPageContent from './secondPage/second_page';  // Import the new component
 import FloatyMan from './FloatyMan.png';
 
 function App() {
@@ -28,8 +29,10 @@ function App() {
             <img src={FloatyMan} alt="FloatyMan" className="FloatyMan" />
           </div>
         </div>
+      </div> 
+      <div className='second-page'>
+        <SecondPageContent />   {/* Use the new component */}
       </div>
-      <div className="second-page"></div>
     </div>
   );
 }
