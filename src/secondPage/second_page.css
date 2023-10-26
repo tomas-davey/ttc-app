@@ -1,7 +1,9 @@
+/* ... your other styles ... */
+
 .content-wrapper {
     padding: 1rem;
     color: #fff;
-    max-width: 50rem;
+    max-width: 50vw; 
     text-align: left;
     width: 90%;
 }
@@ -9,18 +11,16 @@
 .second-page-content {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2vw;
 }
 
-.second-page-content .spaceman-image2  {
+.second-page-content .spaceman-image2 {
     height: 40vw;
-    max-height: 90vh; /* Changed from pixels to viewport height */
-    padding-right: 4rem;
-
+    max-height: 90vh;
 }
 
 .second-page-title {
-    font-size: 2.2rem;
+    font-size: 2.2vw;  /* Changed to viewport width */
     font-weight: bold;
     color: white;
     margin-bottom: 1rem;
@@ -29,47 +29,38 @@
 .grid-2x2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1vw;  
     width: 100%;
-    max-width: 50vw; /* Made it relative to viewport width */
+    max-width: 50vw;
 }
 
 .grid-item {
-    /* background: #1a2a3a; */
     color: white;
-    padding: 1rem;
+    padding: 1vw;
     height: 10vh;
     display: flex;
-    align-items: flex-start; /* Align to the top */
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1vw;
 }
-
-.grid-item-content { /* New Class */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
 
 .grid-item-logo {
-    width: 15vw; /* Relative to viewport width */
+    width: 15vw; 
     height: 15vw;
-    max-width: 60px; /* Ensures it doesn't get too big */
+    max-width: 60px;
     max-height: 60px;
     display: block;
-    align-self: center; /* Added this to center the logo vertically */
-
+    align-self: center;
 }
+
 .grid-item-text {
-    font-weight: bold; /* Make the title bold */
-    margin-bottom: rem; /* Add some space between the title and description */
+    font-weight: bold;
+    margin-bottom: 1vw; /* Adjusted missing value */
 }
 
 .grid-item-description {
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     color: #ccc;
-    max-width: 150px; /* Adjust this value based on your font size and desired appearance */
+    max-width: 15vw; 
 }
 
 .features-title {
@@ -78,6 +69,29 @@
     -webkit-text-stroke-width: 0.1vw; 
     -webkit-text-stroke-color: #fff;
     color: transparent;
-    margin-bottom: 2rem;
+    margin-bottom: 2vw;
     margin-top: -10vw;
+}
+
+/* Responsive Breakpoints */
+
+/* Adjusting for tablets or smaller screens */
+@media (max-width: 768px) {
+    .grid-2x2 {
+        grid-template-columns: 1fr;  /* Stack items vertically for smaller screens */
+    }
+}
+
+/* Adjusting for very small screens */
+@media (max-width: 480px) {
+    .features-title {
+        font-size: 10vw;
+    }
+    .second-page-title {
+        font-size: 4vw;
+    }
+    .grid-item-logo {
+        width: 20vw;
+        height: 20vw;
+    }
 }
