@@ -6,84 +6,17 @@
 .first-page {
   background-image: 
     linear-gradient(to top, rgba(0, 10, 31, 1), rgba(196, 35, 35, 0) 50%),
-    url('./replicate_background.png');
+    url('./firstPage/replicate_background.png');
   background-size: 120% auto;
   background-repeat: no-repeat;
   background-color: #000A1F;
 }
 
-
-/* .second-page {
+.second-page {
   background-color: #000A1F;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-} */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  /* gap: 20px; */
-  padding: 10% 2% 10%;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-column {
-  background-color: transparent;
-  padding: 20px;
-  text-align: left;
-  color: white;
-  padding-left: 15%
-}
-
-
-.right-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.FloatyMan {
-  width: 90%;
-  height: auto;
-  display: block;
-  padding-right: 15%
-}
-
-.container {
-  width: 100%;
-}
-
-.subtext {
-  font-size: 2vw;
-}
-
-.title {
-  font-size: 4.5vw;
-  line-height: 1;
-  padding-bottom: 5%;
-}
-
-.navbar {
-  position: absolute; /* Change to 'fixed' if it should stay fixed while scrolling */
-  width: 100%;
-  z-index: 100;
-  top: 2%; /* Adjusted to 2% */
-}
-
-.navbar a {
-  color: white; /* Text color */
-  padding: 5% 5%;
-  text-decoration: none;
-  font-size: 2vw;
-}
-
-.company-name {
-  color: white; /* Text color */
-  padding: 5% 5%;
-  text-decoration: none;
-  font-size: 2vw;
 }
