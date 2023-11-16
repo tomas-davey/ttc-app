@@ -20,3 +20,11 @@
   align-items: center;
   justify-content: center;
 }
+.third-page {
+  background-color: #000A1F;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

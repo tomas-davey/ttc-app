@@ -1,0 +1,19 @@
+.third-page-content {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+  }
+  
+  .third-page-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .third-page-content p {
+    max-width: 600px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #666;
+  }
+  

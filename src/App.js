@@ -1,6 +1,7 @@
 import './App.css';
 import SecondPageContent from './secondPage/second_page';  // Import the new component
 import FirstPage from './firstPage/first_page'
+import ThirdPage from './thirdPage/third_page';
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
       </div> 
       <div className='second-page'>
         <SecondPageContent />   {/* Use the new component */}
+      </div>
+      <div className='third-page'>
+        <ThirdPage />
       </div>
     </div>
   );
