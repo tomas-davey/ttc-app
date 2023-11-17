@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     maxWidth: '85%',
     margin: '-3em',
-    marginTop: '5%',
+    marginTop: '3%',
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
