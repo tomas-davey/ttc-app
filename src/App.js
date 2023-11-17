@@ -10,7 +10,7 @@ function App() {
         <FirstPage/>
       </div> 
       <div className='second-page'>
-        <SecondPageContent />   {/* Use the new component */}
+        <SecondPageContent />
       </div>
       <div className='third-page'>
         <ThirdPage />
