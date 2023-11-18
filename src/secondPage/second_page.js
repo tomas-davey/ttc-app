@@ -12,33 +12,63 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(2),
-    textAlign: 'left', 
-    marginTop: theme.spacing(3)
+    textAlign: 'left',
+    marginTop: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      // Styles for screens below 600px
+      textAlign: 'center', // Center the text
+    },
   },
   spacemanImage: {
     width: '80%',
     height: 'auto',
     margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      // Adjustments for small screens
+      width: '100%', // Increase width
+      display: 'none',
+    },
   },
   gridContainer: {
     maxWidth: '85%',
-    margin: '-3em',
+    margin: '0 auto', // Changed margin for consistent centering
     marginTop: '3%',
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      justifyContent: 'center', // Center on smaller screens
-      margin: '0 auto', // Adjust margin for centering
+      justifyContent: 'center',
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100%', 
+    },
+    // Added a media query for zoom levels
+    '@media screen and (min-width: 1200px)': { 
+      maxWidth: '100%', // Adjust the maxWidth for larger screens
     },
   },
   cardContentFlex: {
     display: 'flex', 
     alignItems: 'center', 
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+    // Adjusted the media query for flex direction
+    '@media screen and (min-width: 960px)': { 
+      flexDirection: 'row', 
+      flexWrap: 'wrap', 
+    },
   },
   cardMedia: {
     width: 60,
     height: 60,
-    marginRight: theme.spacing(2), 
+    // display: 'none',
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.down('sm')]: {
+      // Adjustments for small screens
+      maxWidth: '20vw',
+      maxHeight: '20vw',
+      marginRight: theme.spacing(1),
+    },
   },
   featureTitle: {
     fontSize: '8vw',
@@ -48,17 +78,17 @@ const useStyles = makeStyles((theme) => ({
     '-webkit-text-stroke-width': '0.1vw',
     '-webkit-text-stroke-color': theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    marginTop: theme.spacing(-10),
+    marginTop: theme.spacing(-7),
     [theme.breakpoints.down('sm')]: {
-      fontSize: '12vw',
+      fontSize: '17vw',
       textAlign: 'center',
-      marginTop: '0.5rem'
+      marginTop: '0.5rem',
+      // Hide on small screens
+      // display: 'none',
     },
-    
   },
   gridItem: {
     textAlign: 'center',
-  
   },
   gridItemImage: {
     maxWidth: 60,
@@ -71,15 +101,20 @@ const useStyles = makeStyles((theme) => ({
   cardTransparent: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
+    // border: '1px solid white', // Add white border
+    // borderRadius: '10px', // Curved corners
   },
   secondaryTitle: {
     color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: '2.3rem',
-    textAlign: 'left', // Align to center
+    textAlign: 'left', // Align to left
     [theme.breakpoints.down('sm')]: {
-      fontSize: '3rem', // Larger size for small screens
+      fontSize: '2.3rem', // Larger size for small screens
       textAlign: 'center',
+      
+      // Hide on small screens
+      display: 'none',
     },
   },
   gridItemTitles: {
@@ -120,7 +155,7 @@ function SecondPageContent() {
           {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Optimize your business processes with our top-notch data analytics tools.' },
             { logo: myGif, title: 'Digital design', description: 'Craft stunning web and mobile applications tailored to your needs.' },
             { logo: phoneLogo, title: 'Pure automation', description: 'Harness the power automation and achieve true efficiency.' },
-            { logo: stocksLogo, title: 'Database design', description: 'Organize and manage your data with our expert databases.' }]
+            { logo: stocksLogo, title: 'AI solutions', description: 'Use AI in your workflow to improve everything' }]
             .map((item, index) => (
               <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
                 <Card className={classes.cardTransparent}>
