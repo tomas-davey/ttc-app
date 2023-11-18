@@ -8,6 +8,8 @@ import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
 import myGif from './apple_android_animation.gif';
 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -30,9 +32,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridContainer: {
-    maxWidth: '85%',
+    maxWidth: '100%',
     margin: '0 auto', // Changed margin for consistent centering
     marginTop: '3%',
+    marginLeft: '-5%',
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
@@ -40,15 +43,14 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       maxWidth: '100%', 
-    },
-    // Added a media query for zoom levels
-    '@media screen and (min-width: 1200px)': { 
-      maxWidth: '100%', // Adjust the maxWidth for larger screens
+      marginLeft: '0%',
+
     },
   },
   cardContentFlex: {
     display: 'flex', 
     alignItems: 'center', 
+    justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -62,12 +64,12 @@ const useStyles = makeStyles((theme) => ({
     width: 60,
     height: 60,
     // display: 'none',
-    marginRight: theme.spacing(2),
+    // marginRight: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       // Adjustments for small screens
       maxWidth: '20vw',
       maxHeight: '20vw',
-      marginRight: theme.spacing(1),
+      // marginRight: theme.spacing(1),
     },
   },
   featureTitle: {
