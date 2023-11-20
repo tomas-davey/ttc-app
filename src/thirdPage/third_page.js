@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(2),
     textAlign: 'left', 
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
+    maxWidth: '100%'
   },
   spacemanImage: {
     width: '80%',
@@ -25,10 +26,13 @@ const useStyles = makeStyles((theme) => ({
     '-webkit-text-stroke-color': theme.palette.common.white,
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(-10),
+    paddingLeft: '0.5rem',
+
     [theme.breakpoints.down('sm')]: {
       fontSize: '12vw',
       textAlign: 'center',
-      marginTop: '0.5rem'
+      marginTop: '0.5rem',
+      // paddingLeft: '0.5rem',
     },
   },
   secondaryTitle: {
@@ -36,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '2.3rem',
     textAlign: 'left',
+    paddingLeft: '3rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '3rem',
       textAlign: 'center',
@@ -44,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   whiteText: {
     color: '#67687A',
     fontSize: '1rem',
+    paddingLeft: '3rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.2rem',
     },

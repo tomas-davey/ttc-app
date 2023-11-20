@@ -7,6 +7,7 @@ import businessAnalLogo from './2nd_logos/business_anal_logo.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
 import myGif from './apple_android_animation.gif';
+// import Spline from '@splinetool/react-spline';
 
 
 
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'left',
     marginTop: theme.spacing(3),
+    maxWidth:'100%',
     [theme.breakpoints.down('sm')]: {
       // Styles for screens below 600px
       textAlign: 'center', // Center the text
@@ -141,6 +143,8 @@ function SecondPageContent() {
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12} md={6}>
         <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
+        {/* <Spline scene="https://prod.spline.design/B40fZROyIDyT-IGB/scene.splinecode" /> */}
+
       </Grid>
 
       <Grid item xs={12} md={6}>
