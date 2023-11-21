@@ -15,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     height: 'auto',
     margin: '0 auto',
+    [theme.breakpoints.down('sm')]: {
+      // Adjustments for small screens
+      width: '100%', // Increase width
+      display: 'none',
+    },
   },
   featureTitle: {
     fontSize: '8vw',

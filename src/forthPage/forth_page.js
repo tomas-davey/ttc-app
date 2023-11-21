@@ -6,16 +6,25 @@ import FloatyMan from './FloatyMan.png'; // Import the image
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
-  gridContainer: {
-    marginTop: theme.spacing(4),
-    [theme.breakpoints.down('sm')]: {
-      justifyContent: 'center',
-    },
-  },
-  floatyMan: {
-    maxWidth: '80%',
-    height: 'auto',
-  },
+    gridContainer: {
+        marginTop: theme.spacing(4),
+        [theme.breakpoints.down('sm')]: {
+          justifyContent: 'center',
+          maxWidth: '100%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+          },
+      },
+      floatyMan: {
+        maxWidth: '80%',
+        height: 'auto',
+        [theme.breakpoints.down('sm')]: {
+          // Adjustments for medium screens
+          width: '100%', // Increase width
+          display: 'none',
+        },
+      },
   formContainer: {
     textAlign: 'center',
     display: 'flex',
@@ -23,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     color: theme.palette.common.white, // Set font color to white
+    maxWidth: '100%'
   },
   textField: {
     width: '80%',
