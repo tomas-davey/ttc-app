@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Card, CardMedia, CardContent } from '@material-ui/core';
+import { Container, Grid, Typography, Card, CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import spacemanImage from './spaceman2.png';
@@ -14,9 +14,7 @@ import myGif from './apple_android_animation.gif';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: theme.spacing(2),
     textAlign: 'left',
-    marginTop: theme.spacing(3),
     maxWidth:'100%',
     [theme.breakpoints.down('sm')]: {
       // Styles for screens below 600px
@@ -73,6 +71,12 @@ const useStyles = makeStyles((theme) => ({
       maxHeight: '20vw',
       // marginRight: theme.spacing(1),
     },
+  },
+  container: {
+    paddingLeft: '5%',
+    paddingRight: '5%',
+    marginLeft: 'auto',
+    marginRight: 'auto', // Center the container horizontally
   },
   featureTitle: {
     fontSize: '8vw',
@@ -140,49 +144,51 @@ const useStyles = makeStyles((theme) => ({
 function SecondPageContent() {
   const classes = useStyles();
   return (
-    <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={12} md={6}>
-        <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
-        {/* <Spline scene="https://prod.spline.design/B40fZROyIDyT-IGB/scene.splinecode" /> */}
+    <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
+      <Grid container className={classes.root} spacing={2}>
+        <Grid item xs={12} md={6}>
+          <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
+          {/* <Spline scene="https://prod.spline.design/B40fZROyIDyT-IGB/scene.splinecode" /> */}
 
-      </Grid>
+        </Grid>
 
-      <Grid item xs={12} md={6}>
-        <Typography variant="h2" className={classes.featureTitle}>
-          FEATURES
-        </Typography>
-        <Typography variant="h4" className={classes.secondaryTitle}>
-          Explore Our Professional
-          <br />
-          Technology Solutions
-        </Typography>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h2" className={classes.featureTitle}>
+            FEATURES
+          </Typography>
+          <Typography variant="h4" className={classes.secondaryTitle}>
+            Explore Our Professional
+            <br />
+            Technology Solutions
+          </Typography>
 
-        <Grid container spacing={1} className={classes.gridContainer}>
-          {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Optimize your business processes with our top-notch data analytics tools.' },
-            { logo: myGif, title: 'Digital design', description: 'Craft stunning web and mobile applications tailored to your needs.' },
-            { logo: phoneLogo, title: 'Pure automation', description: 'Harness the power automation and achieve true efficiency.' },
-            { logo: stocksLogo, title: 'AI solutions', description: 'Use AI in your workflow to improve everything' }]
-            .map((item, index) => (
-              <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
-                <Card className={classes.cardTransparent}>
-                  <CardContent className={classes.cardContentFlex}>
-                    <CardMedia
-                      component="img"
-                      image={item.logo}
-                      title={item.title}
-                      className={classes.cardMedia}
-                    />
-                    <div>
-                      <Typography variant="h6" className={classes.gridItemTitles}>{item.title}</Typography>
-                      <Typography variant="body2" className={classes.whiteText}>{item.description}</Typography>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Grid>
-          ))}
+          <Grid container spacing={1} className={classes.gridContainer}>
+            {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Optimize your business processes with our top-notch data analytics tools.' },
+              { logo: myGif, title: 'Digital design', description: 'Craft stunning web and mobile applications tailored to your needs.' },
+              { logo: phoneLogo, title: 'Pure automation', description: 'Harness the power automation and achieve true efficiency.' },
+              { logo: stocksLogo, title: 'AI solutions', description: 'Use AI in your workflow to improve everything' }]
+              .map((item, index) => (
+                <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
+                  <Card className={classes.cardTransparent}>
+                    <CardContent className={classes.cardContentFlex}>
+                      <CardMedia
+                        component="img"
+                        image={item.logo}
+                        title={item.title}
+                        className={classes.cardMedia}
+                      />
+                      <div>
+                        <Typography variant="h6" className={classes.gridItemTitles}>{item.title}</Typography>
+                        <Typography variant="body2" className={classes.whiteText}>{item.description}</Typography>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </Container>
   );
 }
 

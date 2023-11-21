@@ -6,6 +6,12 @@ import FloatyMan from './FloatyMan.png'; // Import the image
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+        paddingLeft: '5%',
+        paddingRight: '5%',
+        marginLeft: 'auto',
+        marginRight: 'auto', // Center the container horizontally
+      },
     gridContainer: {
         marginTop: theme.spacing(4),
         [theme.breakpoints.down('sm')]: {
@@ -17,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
           },
       },
       floatyMan: {
-        maxWidth: '80%',
+        maxWidth: '100%',
         height: 'auto',
         [theme.breakpoints.down('sm')]: {
           // Adjustments for medium screens
@@ -63,10 +69,10 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
   },
   featureTitle: {
+    textAlign: 'center',
     fontSize: '8vw',
     fontWeight: 'bold',
     color: 'transparent',
-    textAlign: 'left',
     '-webkit-text-stroke-width': '0.1vw',
     '-webkit-text-stroke-color': theme.palette.common.white,
     marginBottom: theme.spacing(4),
@@ -128,12 +134,12 @@ function ForthPage() {
 
   return (
     <>
-      <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground}`}>
+      <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
         <Grid container spacing={3} className={classes.gridContainer}>
-          <Grid item xs={12} sm={6} className={classes.formContainer}>
+          <Grid item xs={12} sm={5} className={classes.formContainer}>
             <img src={FloatyMan} alt="FloatyMan" className={classes.floatyMan} />
           </Grid>
-          <Grid item xs={12} sm={6} className={classes.formContainer}>
+          <Grid item xs={12} sm={7} className={classes.formContainer}>
             <Paper elevation={0} className={`${classes.transparentBackground} ${classes.noBorder}`}>
             <Typography variant="h2" className={classes.featureTitle}>
             CONTACT US
