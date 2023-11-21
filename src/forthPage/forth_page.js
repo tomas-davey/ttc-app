@@ -167,7 +167,7 @@ function ForthPage() {
                   label="Query"
                   variant="outlined"
                   multiline
-                  rows={4}
+                  minRows={4}
                   className={classes.textField}
                   name="query" 
                   value={formData.query}
