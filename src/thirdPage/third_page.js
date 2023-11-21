@@ -6,9 +6,8 @@ import spacemanImage from '../secondPage/spaceman2.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    textAlign: 'left', 
-    maxWidth: '100%'
+    display: 'flex',
+    justifyContent: 'center',
   },
   container: {
     paddingLeft: '5%',
@@ -17,49 +16,63 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto', // Center the container horizontally
   },
   spacemanImage: {
-    width: '80%',
-    height: 'auto',
-    margin: '0 auto',
+    height: 'auto',    // Allow the height to be determined by the container
+    width: '100%',     // Fill the entire width of the container
+    maxWidth: '2000px',
+    minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
-      // Adjustments for small screens
-      width: '100%', // Increase width
       display: 'none',
     },
   },
   featureTitle: {
-    fontSize: '8vw',
+    fontSize: '6vw',
     fontWeight: 'bold',
     color: 'transparent',
-    textAlign: 'left',
+    textAlign: 'center',
     '-webkit-text-stroke-width': '0.1vw',
     '-webkit-text-stroke-color': theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    marginTop: theme.spacing(-10),
-
-
     [theme.breakpoints.down('sm')]: {
       fontSize: '12vw',
       textAlign: 'center',
-      marginTop: '0.5rem',
-      // paddingLeft: '0.5rem',
     },
   },
+
   secondaryTitle: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: '2.3rem',
-    textAlign: 'left',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '3rem',
-      textAlign: 'center',
-    },
+    fontSize: '1.5vw',
+    textAlign: 'center',
+    // [theme.breakpoints.up('lg')]: {
+    //   fontSize: '1rem', // Adjust the font size for larger screens
+    // },
+    // [theme.breakpoints.down('xs')]: {
+    //   fontSize: '1.2rem',
+    //   textAlign: 'center',
+    // },
   },
   whiteText: {
-    color: '#67687A',
-    fontSize: '1rem',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1.2rem',
-    },
+    color: '#FFFFFF',
+    fontSize: '1vw',
+    // [theme.breakpoints.up('lg')]: {
+    //   fontSize: '1rem', // Adjust the font size for larger screens
+    // },
+    // [theme.breakpoints.down('sm')]: {
+    //   fontSize: '1rem',
+    // },
+  },
+
+  textContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: theme.palette.common.white, // Set font color to white
+    maxWidth: '100%'
+  },
+  spacemanContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   // ... (add any other styles you need)
 }));
@@ -70,23 +83,20 @@ function SecondPageContent() {
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
       <Grid container className={classes.root} spacing={2}>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7} className={classes.textContainer}>
           <Typography variant="h2" className={classes.featureTitle}>
             WHY
           </Typography>
           <Typography variant="h4" className={classes.secondaryTitle}>
-          Your vision
-            <br />
-            is our mission
+          Your vision is our mission
           </Typography>
 
           <Typography variant="body1" className={classes.whiteText}>
           At TTC, our approach sets us apart. We understand that every project is a unique opportunity for improvement. Our team excels in customizing solutions to fit your specific needs, embracing each challenge as a chance to push your business to new boundaries. We're not just about delivering software; we're about collaborating closely with you, turning your vision into reality. Our commitment to quality and reliability ensures that the solutions we provide are not only advanced but also dependable. Join us in shaping the future of technology—one groundbreaking solution at a time.
-
-  </Typography>
+          </Typography>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
         </Grid>
 

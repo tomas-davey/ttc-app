@@ -22,12 +22,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   spacemanImage: {
-    width: '80%',
-    height: 'auto',
-    margin: '0 auto',
+    height: 'auto',    // Allow the height to be determined by the container
+    width: '100%',     // Fill the entire width of the container
+    maxWidth: '2000px',
+    minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
-      // Adjustments for small screens
-      width: '100%', // Increase width
       display: 'none',
     },
   },
@@ -140,19 +139,30 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '1.2rem', // Slightly larger on small screens
     },
   },
+  spacemanContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gridText: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 }));
 function SecondPageContent() {
   const classes = useStyles();
   return (
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
       <Grid container className={classes.root} spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
           {/* <Spline scene="https://prod.spline.design/B40fZROyIDyT-IGB/scene.splinecode" /> */}
 
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7} className={classes.gridText}>
           <Typography variant="h2" className={classes.featureTitle}>
             FEATURES
           </Typography>

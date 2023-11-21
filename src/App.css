@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   min-height: 100vh;
 }
 
@@ -10,7 +9,7 @@
   background-size: 120% auto;
   background-repeat: no-repeat;
   background-color: #000A1F;
-  padding-bottom: 5%;
+  padding-bottom: 100px;
 }
 
 .second-page {
@@ -20,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5%;
+  padding-bottom: 25px;
 }
 .third-page {
   background-color: #000A1F;
@@ -29,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5%;
+  padding-bottom: 25px;
 }
 .forth-page {
   background-color: #000A1F;
@@ -38,5 +37,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5%;
+  padding-bottom: 25px;
 }

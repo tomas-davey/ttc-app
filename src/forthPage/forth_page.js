@@ -23,11 +23,12 @@ const useStyles = makeStyles((theme) => ({
           },
       },
       floatyMan: {
-        maxWidth: '100%',
-        height: 'auto',
+        height: 'auto',    // Allow the height to be determined by the container
+        width: '100%',     // Fill the entire width of the container
+        minWidth: '200px',
+        maxWidth: '2000px',
+        objectFit: 'cover',  // Set a minimum width (adjust as needed)
         [theme.breakpoints.down('sm')]: {
-          // Adjustments for medium screens
-          width: '100%', // Increase width
           display: 'none',
         },
       },
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
   featureTitle: {
     textAlign: 'center',
-    fontSize: '8vw',
+    fontSize: '6vw',
     fontWeight: 'bold',
     color: 'transparent',
     '-webkit-text-stroke-width': '0.1vw',
@@ -85,6 +86,11 @@ const useStyles = makeStyles((theme) => ({
   },
   transparentBackground: {
     backgroundColor: 'transparent',
+  },
+  imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 }));
 
@@ -136,7 +142,7 @@ function ForthPage() {
     <>
       <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
         <Grid container spacing={3} className={classes.gridContainer}>
-          <Grid item xs={12} sm={5} className={classes.formContainer}>
+          <Grid item xs={12} sm={5} className={classes.imageContainer}>
             <img src={FloatyMan} alt="FloatyMan" className={classes.floatyMan} />
           </Grid>
           <Grid item xs={12} sm={7} className={classes.formContainer}>
