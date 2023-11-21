@@ -15,17 +15,28 @@
 
 .second-page {
   background-color: #000A1F;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10%;
 }
 .third-page {
   background-color: #000A1F;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10%;
+}
+.forth-page {
+  background-color: #000A1F;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
 }
