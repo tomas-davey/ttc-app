@@ -92,7 +92,7 @@ function FirstPage() {
   return (
     <>
       <CustomAppBar />
-      <Container className={`${classes.transparentBackground} ${classes.container}`}>
+      <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
         <Grid container spacing={3} className={classes.gridContainer}>
           {/* First Row */}
           <Grid item xs={12} sm={6} className={`${classes.leftColumn} ${classes.wordsGrid}`}>

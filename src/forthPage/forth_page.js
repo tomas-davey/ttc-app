@@ -128,7 +128,7 @@ function ForthPage() {
 
   return (
     <>
-      <Container className={`${classes.transparentBackground} ${classes.container}`}>
+      <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground}`}>
         <Grid container spacing={3} className={classes.gridContainer}>
           <Grid item xs={12} sm={6} className={classes.formContainer}>
             <img src={FloatyMan} alt="FloatyMan" className={classes.floatyMan} />
