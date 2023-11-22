@@ -3,10 +3,11 @@ import { Grid, Typography, Card, CardMedia, CardContent } from '@material-ui/cor
 import { makeStyles } from '@material-ui/core/styles';
 
 import spacemanImage from './spaceman2.png';
-import businessAnalLogo from './2nd_logos/business_anal_logo.png';
+import businessAnalLogo from './2nd_logos/business-analytics.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
-import myGif from './apple_android_animation.gif';
+import android_apple from './2nd_logos/apple_android_animation.gif';
+import ScrollVideo from '../animations/laptop_animation';
 // import Spline from '@splinetool/react-spline';
 
 
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   spacemanImage: {
-    width: '80%',
+    width: '100%',
     height: 'auto',
     margin: '0 auto',
     [theme.breakpoints.down('sm')]: {
@@ -142,7 +143,8 @@ function SecondPageContent() {
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12} md={6}>
-        <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
+        {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
+        <ScrollVideo className={classes.spacemanImage}/>
         {/* <Spline scene="https://prod.spline.design/B40fZROyIDyT-IGB/scene.splinecode" /> */}
 
       </Grid>
@@ -159,7 +161,7 @@ function SecondPageContent() {
 
         <Grid container spacing={1} className={classes.gridContainer}>
           {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Optimize your business processes with our top-notch data analytics tools.' },
-            { logo: myGif, title: 'Digital design', description: 'Craft stunning web and mobile applications tailored to your needs.' },
+            { logo: android_apple, title: 'Digital design', description: 'Craft stunning web and mobile applications tailored to your needs.' },
             { logo: phoneLogo, title: 'Pure automation', description: 'Harness the power automation and achieve true efficiency.' },
             { logo: stocksLogo, title: 'AI solutions', description: 'Use AI in your workflow to improve everything' }]
             .map((item, index) => (
