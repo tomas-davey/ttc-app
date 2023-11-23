@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, Grid, Paper, Typography, TextField, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import FloatyMan from './FloatyMan.png'; // Import the image
+import FloatyMan from './Spaceman_4.png'; // Import the image
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({

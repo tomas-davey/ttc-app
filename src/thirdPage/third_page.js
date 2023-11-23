@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import spacemanImage from '../secondPage/spaceman2.png'; 
+import spacemanImage from './Spaceman_3.png'; 
 
 const useStyles = makeStyles((theme) => ({
   root: {

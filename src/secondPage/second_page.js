@@ -143,8 +143,8 @@ function SecondPageContent() {
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12} md={6}>
-        {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-        <ScrollVideo className={classes.spacemanImage}/>
+        <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
+        {/* <ScrollVideo className={classes.spacemanImage}/> */}
         {/* <Spline scene="https://prod.spline.design/B40fZROyIDyT-IGB/scene.splinecode" /> */}
 
       </Grid>
