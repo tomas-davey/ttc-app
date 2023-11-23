@@ -10,38 +10,40 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   container: {
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    // paddingLeft: '5%',
+    // paddingRight: '5%',
     marginLeft: 'auto',
     marginRight: 'auto', // Center the container horizontally
+    maxWidth: '1400px',
   },
   spacemanImage: {
     height: 'auto',    // Allow the height to be determined by the container
     width: '100%',     // Fill the entire width of the container
-    maxWidth: '2000px',
+    maxWidth: '1000px',
     minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
   featureTitle: {
-    fontSize: '6vw',
+    fontSize: '6rem',
     fontWeight: 'bold',
     color: 'transparent',
     textAlign: 'center',
     '-webkit-text-stroke-width': '0.1vw',
     '-webkit-text-stroke-color': theme.palette.common.white,
     [theme.breakpoints.down('sm')]: {
-      fontSize: '12vw',
-      textAlign: 'center',
+      fontSize: '13vw',
+    //   textAlign: 'center',
     },
   },
 
   secondaryTitle: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: '1.5vw',
+    fontSize: '1.9rem',
     textAlign: 'center',
+    paddingBottom: '10px'
     // [theme.breakpoints.up('lg')]: {
     //   fontSize: '1rem', // Adjust the font size for larger screens
     // },
@@ -52,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   whiteText: {
     color: '#FFFFFF',
-    fontSize: '1vw',
+    fontSize: '1.3rem',
     // [theme.breakpoints.up('lg')]: {
     //   fontSize: '1rem', // Adjust the font size for larger screens
     // },
@@ -92,7 +94,9 @@ function SecondPageContent() {
           </Typography>
 
           <Typography variant="body1" className={classes.whiteText}>
-          At TTC, our approach sets us apart. We understand that every project is a unique opportunity for improvement. Our team excels in customizing solutions to fit your specific needs, embracing each challenge as a chance to push your business to new boundaries. We're not just about delivering software; we're about collaborating closely with you, turning your vision into reality. Our commitment to quality and reliability ensures that the solutions we provide are not only advanced but also dependable. Join us in shaping the future of technology—one groundbreaking solution at a time.
+          At TTC, our approach sets us apart. We understand that every project is a unique opportunity for improvement. Our team excels in customizing solutions to fit your specific needs, embracing each challenge as a chance to push your business to new boundaries. 
+          <br /><br />
+          We're not just about delivering software; we're about collaborating closely with you, turning your vision into reality. Our commitment to quality and reliability ensures that the solutions we provide are not only advanced but also dependable. Join us in shaping the future of technology—one groundbreaking solution at a time.
           </Typography>
         </Grid>
 

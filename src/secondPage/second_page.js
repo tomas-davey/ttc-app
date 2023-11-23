@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   spacemanImage: {
     height: 'auto',    // Allow the height to be determined by the container
     width: '100%',     // Fill the entire width of the container
-    maxWidth: '2000px',
+    maxWidth: '1000px',
     minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
       display: 'none',
@@ -72,13 +72,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   container: {
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    // paddingLeft: '5%',
+    // paddingRight: '5%',
     marginLeft: 'auto',
     marginRight: 'auto', // Center the container horizontally
+    maxWidth: '1400px',
   },
   featureTitle: {
-    fontSize: '8vw',
+    fontSize: '6rem',
     fontWeight: 'bold',
     color: 'transparent',
     textAlign: 'left',
@@ -87,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(-7),
     [theme.breakpoints.down('sm')]: {
-      fontSize: '17vw',
+      fontSize: '13vw',
       textAlign: 'center',
       marginTop: '0.5rem',
       // Hide on small screens
@@ -114,10 +115,10 @@ const useStyles = makeStyles((theme) => ({
   secondaryTitle: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: '2.3rem',
-    textAlign: 'left', // Align to left
+    fontSize: '1.9rem',
+    textAlign: 'center', // Align to left
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2.3rem', // Larger size for small screens
+      fontSize: '1.9rem', // Larger size for small screens
       textAlign: 'center',
       
       // Hide on small screens
@@ -127,16 +128,16 @@ const useStyles = makeStyles((theme) => ({
   gridItemTitles: {
     color: '#FFFFFF',
     fontWeight: 'bold',
-    fontSize: '1.8rem',
+    fontSize: '1.6rem',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '2rem', // Adjust for responsiveness
+      fontSize: '1.6rem', // Adjust for responsiveness
     },
   },
   whiteText: {
     color: '#67687A',
-    fontSize: '1rem',
+    fontSize: '1.3rem',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.2rem', // Slightly larger on small screens
+      fontSize: '1.3rem', // Slightly larger on small screens
     },
   },
   spacemanContainer: {
@@ -167,9 +168,7 @@ function SecondPageContent() {
             FEATURES
           </Typography>
           <Typography variant="h4" className={classes.secondaryTitle}>
-            Explore Our Professional
-            <br />
-            Technology Solutions
+            Explore Our Professional Technology Solutions
           </Typography>
 
           <Grid container spacing={1} className={classes.gridContainer}>

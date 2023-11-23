@@ -7,10 +7,11 @@ import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        paddingLeft: '5%',
-        paddingRight: '5%',
+        // paddingLeft: '5%',
+        // paddingRight: '5%',
         marginLeft: 'auto',
         marginRight: 'auto', // Center the container horizontally
+        maxWidth: '1400px',
       },
     gridContainer: {
         marginTop: theme.spacing(4),
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         height: 'auto',    // Allow the height to be determined by the container
         width: '100%',     // Fill the entire width of the container
         minWidth: '200px',
-        maxWidth: '2000px',
+        maxWidth: '1000px',
         objectFit: 'cover',  // Set a minimum width (adjust as needed)
         [theme.breakpoints.down('sm')]: {
           display: 'none',
@@ -46,12 +47,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     '& .MuiInputLabel-root': {
       color: theme.palette.common.white, // Set label color to white
+      fontSize: '1.3rem'
     },
     '& .MuiInputBase-input': {
       color: theme.palette.common.white, // Set input text color to white
+      fontSize: '1.3rem'
     },
     '& .MuiInputBase-input::placeholder': {
       color: theme.palette.common.white, // Set placeholder text color to white
+      fontSize: '1.3rem'
     },
     '& .MuiOutlinedInput-notchedOutline': {
       borderColor: theme.palette.common.white, // Set border color to white
@@ -66,12 +70,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white, // Set text color to white
   },
   orEmailText: {
+    fontSize: '1.3rem',
     marginTop: theme.spacing(2),
     color: theme.palette.common.white,
   },
   featureTitle: {
     textAlign: 'center',
-    fontSize: '6vw',
+    fontSize: '6rem',
     fontWeight: 'bold',
     color: 'transparent',
     '-webkit-text-stroke-width': '0.1vw',
@@ -79,9 +84,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(-10),
     [theme.breakpoints.down('sm')]: {
-      fontSize: '12vw',
-      textAlign: 'center',
-      marginTop: '0.5rem'
+      fontSize: '13vw',
     },
   },
   transparentBackground: {

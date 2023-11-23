@@ -27,8 +27,11 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   floatyMan: {
-    maxWidth: '80%',
-    height: 'auto',
+    height: 'auto',    // Allow the height to be determined by the container
+    width: '100%',     // Fill the entire width of the container
+    minWidth: '200px',
+    maxWidth: '1000px',
+    objectFit: 'cover',  // Set a minimum width (adjust as needed)
   },
   headerText: {
     color: 'white',
@@ -37,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtext: {
     color: 'white',
-    fontSize: '1rem',
+    fontSize: '1.3rem',
     display: 'block',
     padding: '5%',
     [theme.breakpoints.down('sm')]: {
@@ -46,13 +49,14 @@ const useStyles = makeStyles((theme) => ({
   },
   subtext2: {
     color: 'white', // Set the text color to white
-    fontSize: '1.5rem', // Set the font size to 1.5rem for the second Typography
+    fontSize: '1.3rem', // Set the font size to 1.5rem for the second Typography
   },
   container: {
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    // paddingLeft: '5%',
+    // paddingRight: '5%',
     marginLeft: 'auto',
     marginRight: 'auto', // Center the container horizontally
+    maxWidth: '1400px',
   },
   transparentBackground: {
     backgroundColor: 'transparent',
@@ -95,7 +99,7 @@ function FirstPage() {
       <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
         <Grid container spacing={3} className={classes.gridContainer}>
           {/* First Row */}
-          <Grid item xs={12} sm={6} className={`${classes.leftColumn} ${classes.wordsGrid}`}>
+          <Grid item xs={12} sm={7} className={`${classes.leftColumn} ${classes.wordsGrid}`}>
             <Paper elevation={0} className={`${classes.transparentBackground} ${classes.noBorder}`}>
               <Typography variant="h4" className={classes.headerText}>
                 Your Idea,
@@ -109,7 +113,7 @@ function FirstPage() {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={6} className={classes.rightColumn}>
+          <Grid item xs={12} sm={5} className={classes.rightColumn}>
             <img src={FloatyMan} alt="FloatyMan" className={classes.floatyMan} />
           </Grid>
 
