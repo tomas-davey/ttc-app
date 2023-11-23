@@ -3,7 +3,7 @@ import { Grid, Typography, Card, CardMedia, CardContent } from '@material-ui/cor
 import { makeStyles } from '@material-ui/core/styles';
 
 import spacemanImage from './spaceman2.png';
-import businessAnalLogo from './2nd_logos/business-analytics.png';
+import businessAnalLogo from './2nd_logos/business_anal_logo.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
 import android_apple from './2nd_logos/apple_android_animation.gif';
