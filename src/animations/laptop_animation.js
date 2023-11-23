@@ -24,10 +24,10 @@ const ScrollVideo = ({ className }) => {
         const videoTime = videoRef.current.duration * scrollPosition;
 
         // next 4 lines can be deleted, just for getting the scroll percentage
-        const actualScrollPosition = window.scrollY || window.pageYOffset;
-        const totalScrollHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercentage = (actualScrollPosition / totalScrollHeight) ;
-        console.log(`Actual scroll position as a percentage: ${scrollPercentage.toFixed(2)}%`);
+        // const actualScrollPosition = window.scrollY || window.pageYOffset;
+        // const totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+        // const scrollPercentage = (actualScrollPosition / totalScrollHeight) ;
+        // console.log(`Actual scroll position as a percentage: ${scrollPercentage.toFixed(2)}%`);
 
 
   
@@ -54,6 +54,7 @@ const ScrollVideo = ({ className }) => {
       src={myVideo}
       muted
       className={className} // Apply the passed className
+      preload="auto"
 
       onLoadedMetadata={() => console.log("Video is loaded and ready.")}
     >

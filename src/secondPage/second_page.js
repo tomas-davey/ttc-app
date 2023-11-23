@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   spacemanImage: {
     width: '100%',
     height: 'auto',
-    margin: '0 auto',
+    margin: '-10% 0 auto',
     [theme.breakpoints.down('sm')]: {
       // Adjustments for small screens
       width: '100%', // Increase width
