@@ -1,6 +1,6 @@
 // FirstPage.js
 import React from 'react';
-import FloatyMan from './FloatyMan.png';
+import FloatyMan from './Spaceman1.png';
 import { Container, Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CustomAppBar from '../navBar/navbar';
