@@ -3,6 +3,8 @@ import { Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import spacemanImage from './Spaceman3.png'; 
+import ScrollVideo from '../animations/scroll_animations';
+import iphoneAnimation from '../animations/iphone_animation_2.mp4';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto',    // Allow the height to be determined by the container
     width: '100%',     // Fill the entire width of the container
     maxWidth: '1000px',
+    padding: '20%',
     minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
       display: 'none',
@@ -101,7 +104,9 @@ function SecondPageContent() {
         </Grid>
 
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
-          <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
+          {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
+          <ScrollVideo className={classes.spacemanImage} animation_location={iphoneAnimation} starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
+
         </Grid>
 
       </Grid>

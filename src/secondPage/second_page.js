@@ -7,8 +7,9 @@ import businessAnalLogo from './2nd_logos/business_anal_logo.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
 import myGif from './apple_android_animation.gif';
-// import Spline from '@splinetool/react-spline';
-import ScrollVideo from '../animations/laptop_animation';
+import Spline from '@splinetool/react-spline';
+import ScrollVideo from '../animations/scroll_animations';
+import laptopAnimation from '../animations/ttc-laptop_10.mp4';
 
 
 
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     height: 'auto',    // Allow the height to be determined by the container
     width: '100%',     // Fill the entire width of the container
     maxWidth: '1000px',
+    marginLeft: '-20%',
     minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
       display: 'none',
@@ -159,8 +161,8 @@ function SecondPageContent() {
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
-          <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" />
-          {/* <ScrollVideo className={classes.spacemanImage}/> */}
+          {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
+          <ScrollVideo className={classes.spacemanImage} animation_location={laptopAnimation} starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
 
         </Grid>
 
