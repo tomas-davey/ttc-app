@@ -7,7 +7,7 @@ import businessAnalLogo from './2nd_logos/business_anal_logo.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
 import myGif from './apple_android_animation.gif';
-import Spline from '@splinetool/react-spline';
+// import Spline from '@splinetool/react-spline';
 import ScrollVideo from '../animations/scroll_animations';
 import laptopAnimation from '../animations/ttc-laptop_10.mp4';
 

@@ -33,12 +33,12 @@ function App() {
           <ThirdPage />
         </div>
         <div className='forth-page'>
-          <FifthPage />
-        </div>
-        <div className='forth-page'>
           <ForthPage />
         </div>
       </div>
+        <div className='forth-page'>
+          <FifthPage />
+        </div>
       </ThemeProvider>
   );
 }
