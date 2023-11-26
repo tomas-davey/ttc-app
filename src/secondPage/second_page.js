@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography, Card, CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import spacemanImage from './Spaceman_2v2.png';
+import spacemanImage from './Spaceman_2v2_reverse.png';
 import businessAnalLogo from './2nd_logos/business_anal_logo.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';

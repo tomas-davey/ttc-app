@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center', // Center align text on small screens
+    },
   },
   floatyMan: {
     height: 'auto',    // Allow the height to be determined by the container
@@ -32,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     minWidth: '200px',
     maxWidth: '1000px',
     objectFit: 'cover',  // Set a minimum width (adjust as needed)
+    [theme.breakpoints.down('sm')]: {
+      display: 'none', // Hide the FloatyMan image on small screens
+    },
   },
   headerText: {
     color: 'white',
