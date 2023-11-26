@@ -7,16 +7,16 @@
 
 .first-page {
   background-image: 
-    linear-gradient(to top, rgba(0, 10, 31, 1), rgba(196, 35, 35, 0) 50%),
-    url('./firstPage/replicate_background1.png');
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(161, 106, 54, 0) 50%),
+    url('./firstPage/replicate_background2.png');
   background-size: 120% auto;
   background-repeat: no-repeat;
-  background-color: #000A1F;
+  background-color: #000000;
   padding-bottom: 50px;
 }
 
 .second-page {
-  background-color: #000A1F;
+  background-color: #000000;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
   padding-bottom: 25px;
 }
 .third-page {
-  background-color: #000A1F;
+  background-color: #000000;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   padding-bottom: 25px;
 }
 .forth-page {
-  background-color: #000A1F;
+  background-color: #000000;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
