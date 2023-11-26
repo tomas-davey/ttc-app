@@ -3,6 +3,7 @@ import SecondPageContent from './secondPage/second_page';  // Import the new com
 import FirstPage from './firstPage/first_page'
 import ThirdPage from './thirdPage/third_page';
 import ForthPage from './forthPage/forth_page';
+import FifthPage from './fifthPage/fifth_page';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 const theme = createTheme({
@@ -35,6 +36,9 @@ function App() {
           <ForthPage />
         </div>
       </div>
+        <div className='forth-page'>
+          <FifthPage />
+        </div>
       </ThemeProvider>
   );
 }
