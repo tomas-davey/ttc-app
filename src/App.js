@@ -22,16 +22,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className='App'>
-        <div className="first-page">
+        <div className="first-page" id="1">
           <FirstPage/>
         </div> 
-        <div className='second-page'>
+        <div className='second-page' id="2">
           <SecondPageContent />
         </div>
-        <div className='third-page'>
+        <div className='third-page' id="3">
           <ThirdPage />
         </div>
-        <div className='forth-page'>
+        <div className='forth-page' id="4">
           <ForthPage />
         </div>
       </div>

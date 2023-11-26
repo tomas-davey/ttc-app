@@ -81,8 +81,9 @@ const useStyles = makeStyles((theme) => ({
     color: 'transparent',
     '-webkit-text-stroke-width': '0.1vw',
     '-webkit-text-stroke-color': theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    marginTop: theme.spacing(-10),
+    // marginBottom: theme.spacing(4),
+    // marginTop: theme.spacing(-10),
+    paddingBottom: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
       fontSize: '13vw',
     },

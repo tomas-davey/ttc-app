@@ -1,7 +1,9 @@
 // CustomAppBar.js
 import React from 'react';
-import { Container, AppBar, Toolbar, Typography, Button } from '@material-ui/core';
+import { Container, AppBar, Toolbar, Typography, Button, Grid  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center', // Center the content horizontally
   },
   title: {
+    flexGrow: 1, // Take up all available space on the left
     margin: theme.spacing(0, 1),
   },
   button: {
@@ -34,22 +37,47 @@ const useStyles = makeStyles((theme) => ({
 function CustomAppBar() {
   const classes = useStyles();
 
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+  
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+ 
   return (
-    <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
+    <Container sx={{ maxWidth: '100%' }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" className={classes.title}>
             TTC
           </Typography>
-          <Button color="inherit" href="#home" className={classes.button}>
-            Home
-          </Button>
-          <Button color="inherit" href="#services" className={classes.button}>
-            Services
-          </Button>
-          <Button color="inherit" href="#contact" className={classes.button}>
-            Contact Us
-          </Button>
+          <Grid container justifyContent="center" alignItems="center">
+            <Grid item>
+              <Button color="inherit" onClick={() => scrollTo('1')} className={classes.button}>
+                Home
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button color="inherit" onClick={() => scrollTo('2')} className={classes.button}>
+                Features
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button color="inherit" onClick={() => scrollTo('3')} className={classes.button}>
+                Why
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button color="inherit" onClick={() => scrollTo('4')} className={classes.button}>
+                Contact Us
+              </Button>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
     </Container>
