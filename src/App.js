@@ -5,6 +5,7 @@ import ThirdPage from './thirdPage/third_page';
 import ForthPage from './forthPage/forth_page';
 import FifthPage from './fifthPage/fifth_page';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import ShootingStar from './secondPage/ShootingStar';
 
 const theme = createTheme({
   typography: {
@@ -39,6 +40,7 @@ function App() {
         <div className='forth-page'>
           <FifthPage />
         </div>
+           <ShootingStar/>
       </ThemeProvider>
   );
 }

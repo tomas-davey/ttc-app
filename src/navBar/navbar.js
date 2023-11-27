@@ -2,8 +2,6 @@
 import React from 'react';
 import { Container, AppBar, Toolbar, Typography, Button, Grid  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link, animateScroll as scroll } from 'react-scroll';
-import { Link as ScrollLink } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   root: {
