@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography, Card, CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+// import spacemanImage from './Spaceman_2v2_reverse.png';
 import businessAnalLogo from './2nd_logos/business_anal_logo.png';
 import phoneLogo from './2nd_logos/phone_logo.png';
 import stocksLogo from './2nd_logos/stocks_logo.png';
@@ -162,7 +163,7 @@ function SecondPageContent() {
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-          <ScrollVideo className={classes.spacemanImage} animation_location={laptopAnimation} starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
+          <ScrollVideo className={classes.spacemanImage} animation_location={laptopAnimation} starttrigger={'top 90%'} endtrigger={'bottom 50%'}/>
 
         </Grid>
 

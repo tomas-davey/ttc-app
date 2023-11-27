@@ -44,7 +44,7 @@ const ScrollVideo = ({ className, animation_location, starttrigger, endtrigger }
       src={animation_location}
       muted
       className={className}
-      preload="auto"
+      // preload="auto"
       onLoadedMetadata={() => console.log("Video is loaded and ready.")}
     >
       Your browser does not support the video tag.
