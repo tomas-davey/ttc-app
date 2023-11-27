@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     width: '12px',
     height: '12px',
     animation: '$shootingStarAnimation linear infinite',
-    zIndex: 1,
+    zIndex: 0,
   },
   '@keyframes shootingStarAnimation': {
     '0%': {
@@ -32,27 +32,28 @@ const ShootingStar = () => {
 
   useEffect(() => {
     const generateRandomStar = () => {
-        const container = document.querySelector('.App');
+        const container = document.body;
         const containerWidth = container.offsetWidth;
-        const containerHeight = container.offsetHeight;
+        const containerHeight = document.body.scrollHeight;
         // const firstPageWidth = document.getElementById('1').offsetWidth;
         // const firstPageHeight = document.getElementById('1').offsetHeight;
-        console.log(containerWidth)
+        console.log(containerHeight)
         const left = Math.random() * containerWidth
         const top = Math.random() * containerHeight
+        console.log("HERE", top)
         return {
          left,
          top,
           width: Math.random() * 6,
           speed: Math.random()*3 + 1,
-          delay: Math.random() * 10,
-            delay: Math.random() * 3,
-          viewportWidth: Math.random() * containerWidth - left,
+          delay: Math.random() * 3,
+          viewportWidth: Math.random() * containerWidth,
           viewportHeight: Math.random() * window.innerHeight - top,
+          // viewportHeight: 5
         };
       };
       
-    const initialStars = Array.from({ length: 6 }, generateRandomStar);
+    const initialStars = Array.from({ length: 15 }, generateRandomStar);
     setStars(initialStars);
 
     const intervalId = setInterval(() => {
