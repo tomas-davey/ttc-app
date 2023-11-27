@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, Grid, Paper, Typography, TextField, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import FloatyMan from './FloatyMan.png'; // Import the image
+// import FloatyMan from './FloatyMan.png'; // Import the image
 import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
@@ -96,7 +96,46 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  underlineInput: {
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderWidth: '0 0 2px 0', // Only bottom border
+      },
+      '&:hover fieldset': {
+        borderColor: theme.palette.common.white, // Change color on hover
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: theme.palette.primary.main, // Change color when focused
+      },
+    },
+  },
+  stepsContainer: {
+    textAlign: 'center',
+    color: theme.palette.common.white, // Set text color to white
+  },
+  stepTitle: {
+    marginBottom: theme.spacing(3),
+    fontWeight: 'bold',
+    fontSize: '1.5rem',
+  },
+  stepItem: {
+    marginBottom: theme.spacing(2),
+    fontSize: '1.2rem',
+  },
 }));
+
+const Steps = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.stepsContainer}>
+    <Typography variant="h5" className={classes.stepTitle}>Follow These Steps:</Typography>
+    <Typography variant="h6" className={classes.stepItem}>1. Book a free 1 on 1 initial consulting session by emailing us a time that works for you.</Typography>
+    <Typography variant="h6" className={classes.stepItem}>2. We learn, understand and create the technology you need.</Typography>
+    <Typography variant="h6" className={classes.stepItem}>3. The technology improves your business</Typography>
+  </div>
+  );
+};
 
 function ForthPage() {
   const classes = useStyles()
@@ -145,20 +184,22 @@ function ForthPage() {
   return (
     <>
       <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
-        <Grid container spacing={3} className={classes.gridContainer}>
-          <Grid item xs={12} sm={5} className={classes.imageContainer}>
-            <img src={FloatyMan} alt="FloatyMan" className={classes.floatyMan} />
-          </Grid>
-          <Grid item xs={12} sm={7} className={classes.formContainer}>
-            <Paper elevation={0} className={`${classes.transparentBackground} ${classes.noBorder}`}>
             <Typography variant="h2" className={classes.featureTitle}>
             CONTACT US
             </Typography>
+        <Grid container spacing={3} className={classes.gridContainer}>
+          <Grid item xs={12} sm={5} className={classes.imageContainer}>
+            {/* <img src={FloatyMan} alt="FloatyMan" className={classes.floatyMan} /> */}
+            <Steps />
+
+          </Grid>
+          <Grid item xs={12} sm={7} className={classes.formContainer}>
+            <Paper elevation={0} className={`${classes.transparentBackground} ${classes.noBorder}`}>
             <form onSubmit={handleSubmit}>
                 <TextField
                   label="Name"
                   variant="outlined"
-                  className={classes.textField}
+                  className={`${classes.textField} ${classes.underlineInput}`} 
                   name="name"
                   value={formData.name} 
                   onChange={handleInputChange} 
@@ -166,7 +207,7 @@ function ForthPage() {
                 <TextField
                   label="Email"
                   variant="outlined"
-                  className={classes.textField}
+                  className={`${classes.textField} ${classes.underlineInput}`} 
                   name="email" 
                   value={formData.email} 
                   onChange={handleInputChange}
@@ -174,7 +215,7 @@ function ForthPage() {
                  <TextField
                   label="Subject"
                   variant="outlined"
-                  className={classes.textField}
+                  className={`${classes.textField} ${classes.underlineInput}`} 
                   name="subject"
                   value={formData.subject} 
                   onChange={handleInputChange} 
@@ -184,8 +225,8 @@ function ForthPage() {
                   variant="outlined"
                   multiline
                   minRows={4}
-                  className={classes.textField}
-                  name="query" 
+                  className={`${classes.textField} ${classes.underlineInput}`} 
+                    name="query" 
                   value={formData.query}
                   onChange={handleInputChange} 
                 />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import spacemanImage from './Spaceman3.png'; 
+// import spacemanImage from './Spaceman3.png'; 
 import ScrollVideo from '../animations/scroll_animations';
 import iphoneAnimation from '../animations/iphone_animation_2.mp4';
 
