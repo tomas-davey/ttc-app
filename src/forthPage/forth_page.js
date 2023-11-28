@@ -129,7 +129,7 @@ const Steps = () => {
 
   return (
     <div className={classes.stepsContainer}>
-    <Typography variant="h5" className={classes.stepTitle}>Follow These Steps:</Typography>
+    <Typography variant="h5" className={classes.stepTitle}>Next steps:</Typography>
     <Typography variant="h6" className={classes.stepItem}>- Book a free 1 on 1 initial consulting session by emailing us a time that works for you.</Typography>
     <Typography variant="h6" className={classes.stepItem}>- We learn, understand and create the technology you need.</Typography>
     <Typography variant="h6" className={classes.stepItem}>- The technology improves your business</Typography>
