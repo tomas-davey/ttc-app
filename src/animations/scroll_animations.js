@@ -36,7 +36,7 @@ const ScrollVideo = ({ className, animation_location, starttrigger, endtrigger }
         scrollTriggerInstance.kill();
       }
     };
-  }, []);
+  }, [endtrigger, starttrigger]);
 
   return (
     <video
