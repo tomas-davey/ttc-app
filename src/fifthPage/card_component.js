@@ -8,8 +8,12 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0 0 10px purple',
     border: '3px solid transparent',
     color: 'white',
-    width: '400px',
-    height: '600px',
+    // [theme.breakpoints.up('md')]: {
+    //   width: '40%'
+    //   },
+    // width: '100%',
+    width: '100%',
+    height: '100%',
     transition: 'all 0.3s ease-in-out',
     opacity: 0.85,
     '&:hover': {

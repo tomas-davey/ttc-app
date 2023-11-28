@@ -45,7 +45,9 @@ function App() {
         </div>
       </div>
         
-           <ShootingStar/>
+      {/* <div className='shooting-star'>
+          <ShootingStar/>
+        </div> */}
       </ThemeProvider>
   );
 }
