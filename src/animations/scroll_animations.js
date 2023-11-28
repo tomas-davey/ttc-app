@@ -1,14 +1,15 @@
 import { gsap } from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 const ScrollVideo = ({ className, animation_location, starttrigger, endtrigger }) => {
   const videoRef = useRef(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false); // HERE
 
   useEffect(() => {
-    if (!videoRef.current) return;
-
+    if (!isVideoLoaded || !videoRef.current) return; // HERE
+    // if (!videoRef.current) return;
     // Trigger animation when the video is 50% visible
     const startTrigger = starttrigger; // 'top 90%';
     const endTrigger = endtrigger ;// 'bottom 70%';
@@ -36,7 +37,7 @@ const ScrollVideo = ({ className, animation_location, starttrigger, endtrigger }
         scrollTriggerInstance.kill();
       }
     };
-  }, [endtrigger, starttrigger]);
+  }, [isVideoLoaded, endtrigger, starttrigger]);
 
   return (
     <video
@@ -46,6 +47,8 @@ const ScrollVideo = ({ className, animation_location, starttrigger, endtrigger }
       className={className}
       preload="auto"
       onLoadedMetadata={() => console.log("Video is loaded and ready.")}
+      onLoadedData={() => setIsVideoLoaded(true)} // Set video loaded status // HERE
+      onCanPlayThrough={() => setIsVideoLoaded(true)} // Additional check for video readiness // HERE
     >
       Your browser does not support the video tag.
     </video>

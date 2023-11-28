@@ -9,7 +9,7 @@ import stocksLogo from './2nd_logos/stocks_logo.png';
 import myGif from './apple_android_animation.gif';
 // import Spline from '@splinetool/react-spline';
 import ScrollVideo from '../animations/scroll_animations';
-import laptopAnimation from '../animations/ttc-laptop_10.mp4';
+// import laptopAnimation from '../animations/ttc-laptop_10.mp4';
 
 
 
@@ -163,7 +163,7 @@ function SecondPageContent() {
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-          <ScrollVideo className={classes.spacemanImage} animation_location={laptopAnimation} starttrigger={'top 90%'} endtrigger={'bottom 50%'}/>
+          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcstorageaccount.blob.core.windows.net/ttcmedia/ttc-laptop_11.mp4" starttrigger={'top 90%'} endtrigger={'bottom 50%'}/>
 
         </Grid>
 
@@ -176,10 +176,10 @@ function SecondPageContent() {
           </Typography>
 
           <Grid container spacing={1} className={classes.gridContainer}>
-            {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Optimize your business processes with our top-notch data analytics tools.' },
-              { logo: myGif, title: 'Digital design', description: 'Craft stunning web and mobile applications tailored to your needs.' },
-              { logo: phoneLogo, title: 'Pure automation', description: 'Harness the power automation and achieve true efficiency.' },
-              { logo: stocksLogo, title: 'AI solutions', description: 'Use AI in your workflow to improve everything' }]
+            {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Utilize our customized data analytics tools to enhance your business analytics' },
+              { logo: myGif, title: 'Digital design', description: ' Create stunning web and mobile applications, including backend, tailored to your unique needs' },
+              { logo: phoneLogo, title: 'Automation', description: 'Automate time-consuming, mundane tasks to boost efficiency and productivity' },
+              { logo: stocksLogo, title: 'AI solutions', description: ' Enhance your business and customer interactions by incorporating AI into your workflow' }]
               .map((item, index) => (
                 <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
                   <Card className={classes.cardTransparent}>

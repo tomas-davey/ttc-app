@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     fontSize: '1.3rem',
     display: 'block',
-    padding: '5%',
+    padding: '1%',
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -115,7 +115,7 @@ function FirstPage() {
                 Our Tech
               </Typography>
               <Typography variant="body1" className={`${classes.subtext} ${classes.headerText}`}>
-                Merging AI, data, and web development to boost businesses from barber shops to restaurants. Elevate with us.
+                Merging AI, data, and web development to boost businesses to the next level. Elevate with us.
               </Typography>
             </Paper>
           </Grid>
