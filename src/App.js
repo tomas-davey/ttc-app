@@ -6,6 +6,7 @@ import ForthPage from './forthPage/forth_page';
 import FifthPage from './fifthPage/fifth_page';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import ShootingStar from './secondPage/ShootingStar';
+import LandingPage from './firstPage/first_page_new';
 
 const theme = createTheme({
   typography: {
@@ -24,9 +25,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className='App'>
-        <div className="first-page" id="1">
+        <div>
+          <LandingPage className="landing-page" id="0"/>
+        </div>
+        {/* <div className="first-page" id="1">
           <FirstPage/>
-        </div> 
+        </div>  */}
         <div className='second-page' id="2">
           <SecondPageContent />
         </div>
