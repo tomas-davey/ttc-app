@@ -33,13 +33,13 @@ function App() {
         <div className='third-page' id="3">
           <ThirdPage />
         </div>
+        <div className='forth-page'>
+          <FifthPage />
+        </div>
         <div className='forth-page' id="4">
           <ForthPage />
         </div>
       </div>
-        <div className='forth-page'>
-          <FifthPage />
-        </div>
            <ShootingStar/>
       </ThemeProvider>
   );

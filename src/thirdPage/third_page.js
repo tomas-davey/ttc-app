@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // import spacemanImage from './Spaceman3.png'; 
 import ScrollVideo from '../animations/scroll_animations';
-import iphoneAnimation from '../animations/iphone_animation_2.mp4';
+// import iphoneAnimation from '../animations/iphone_animation_2.mp4';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
   },
   spacemanImage: {
     height: 'auto',    // Allow the height to be determined by the container
-    width: '100%',     // Fill the entire width of the container
+    width: '50%',     // Fill the entire width of the container
     maxWidth: '1000px',
-    padding: '20%',
+    // padding: '30%',
     minWidth: '200px',  // Set a minimum width (adjust as needed)
     [theme.breakpoints.down('sm')]: {
       display: 'none',
@@ -99,13 +99,13 @@ function SecondPageContent() {
           <Typography variant="body1" className={classes.whiteText}>
           At TTC, our approach sets us apart. We understand that every project is a unique opportunity for improvement. Our team excels in customizing solutions to fit your specific needs, embracing each challenge as a chance to push your business to new boundaries. 
           <br /><br />
-          We're not just about delivering software; we're about collaborating closely with you, turning your vision into reality. Our commitment to quality and reliability ensures that the solutions we provide are not only advanced but also dependable. Join us in shaping the future of technology—one groundbreaking solution at a time.
+          We're not just about delivering software; we're about collaborating closely with you, turning your vision into reality. Our commitment to quality and reliability ensures that the solutions we provide are not only advanced but also dependable. Join us in shaping the future of technology—one solution at a time.
           </Typography>
         </Grid>
 
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-          <ScrollVideo className={classes.spacemanImage} animation_location={iphoneAnimation} starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
+          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcstorageaccount.blob.core.windows.net/ttcmedia/ttc-iphone_3.mp4" starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
 
         </Grid>
 
