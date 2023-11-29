@@ -4,6 +4,7 @@ import { Container, Grid, Paper, Typography, TextField, Button } from '@material
 import { makeStyles } from '@material-ui/core/styles';
 // import FloatyMan from './FloatyMan.png'; // Import the image
 import emailjs from 'emailjs-com';
+import FadeTextComponent from '../animations/scroll_fade';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%'
   },
   textField: {
+    opacity: 0,
     width: '80%',
     marginBottom: theme.spacing(2),
     '& .MuiInputLabel-root': {
@@ -65,16 +67,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   submitButton: {
+    opacity: 0,
     width: '80%',
     backgroundColor: 'blue',
     color: theme.palette.common.white, // Set text color to white
   },
   orEmailText: {
+    opacity: 0,
     fontSize: '1.3rem',
     marginTop: theme.spacing(2),
     color: theme.palette.common.white,
   },
   featureTitle: {
+    opacity: 0,
     textAlign: 'center',
     fontSize: '6rem',
     fontWeight: 'bold',
@@ -110,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   stepsContainer: {
+    opacity: 0,
     textAlign: 'center',
     color: theme.palette.common.white, // Set text color to white
   },
@@ -184,6 +190,7 @@ function ForthPage() {
   return (
     <>
       <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
+      <FadeTextComponent triggerClasses={[`.${classes.featureTitle}`, `.${classes.textField}`, `.${classes.submitButton}`, `.${classes.orEmailText}`, `.${classes.stepsContainer}` ]} />
             <Typography variant="h2" className={classes.featureTitle}>
             CONTACT US
             </Typography>

@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // import spacemanImage from './Spaceman3.png'; 
 import ScrollVideo from '../animations/scroll_animations';
 // import iphoneAnimation from '../animations/iphone_animation_2.mp4';
+import FadeTextComponent from '../animations/scroll_fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '1400px',
   },
   spacemanImage: {
+    opacity: 0,
     height: 'auto',    // Allow the height to be determined by the container
     width: '50%',     // Fill the entire width of the container
     maxWidth: '1000px',
@@ -29,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   featureTitle: {
+    opacity: 0,
     fontSize: '6rem',
     fontWeight: 'bold',
     color: 'transparent',
@@ -42,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   secondaryTitle: {
+    opacity: 0,
     color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: '1.9rem',
@@ -56,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   whiteText: {
+    opacity: 0,
     color: '#FFFFFF',
     fontSize: '1.3rem',
     // [theme.breakpoints.up('lg')]: {
@@ -87,6 +92,7 @@ function SecondPageContent() {
   
   return (
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
+       <FadeTextComponent triggerClasses={[`.${classes.featureTitle}`, `.${classes.secondaryTitle}`, `.${classes.whiteText}`, `.${classes.spacemanImage}` ]} />
       <Grid container className={classes.root} spacing={2}>
 
         <Grid item xs={12} md={7} className={classes.textContainer}>

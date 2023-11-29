@@ -10,8 +10,7 @@ import myGif from './apple_android_animation.gif';
 // import Spline from '@splinetool/react-spline';
 import ScrollVideo from '../animations/scroll_animations';
 // import laptopAnimation from '../animations/ttc-laptop_10.mp4';
-
-
+import FadeTextComponent from '../animations/scroll_fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   spacemanImage: {
+    opacity: 0,
     height: 'auto',    // Allow the height to be determined by the container
     width: '100%',     // Fill the entire width of the container
     maxWidth: '1000px',
@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardContentFlex: {
+    opacity: 0,
     display: 'flex', 
     alignItems: 'center', 
     justifyContent: 'center',
@@ -82,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '1400px',
   },
   featureTitle: {
+    opacity: 0,
     fontSize: '6rem',
     fontWeight: 'bold',
     color: 'transparent',
@@ -117,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius: '10px', // Curved corners
   },
   secondaryTitle: {
+    opacity: 0,
     color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: '1.9rem',
@@ -160,6 +163,7 @@ function SecondPageContent() {
   const classes = useStyles();
   return (
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
+      <FadeTextComponent triggerClasses={[`.${classes.featureTitle}`, `.${classes.secondaryTitle}`, `.${classes.spacemanImage}`, '#businessCard', '#digitalCard', '#automationCard', '#aICard']} />
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
@@ -176,14 +180,14 @@ function SecondPageContent() {
           </Typography>
 
           <Grid container spacing={1} className={classes.gridContainer}>
-            {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Utilize our customized data analytics tools to enhance your business analytics' },
-              { logo: myGif, title: 'Digital design', description: ' Create stunning web and mobile applications, including backend, tailored to your unique needs' },
-              { logo: phoneLogo, title: 'Automation', description: 'Automate time-consuming, mundane tasks to boost efficiency and productivity' },
-              { logo: stocksLogo, title: 'AI solutions', description: ' Enhance your business and customer interactions by incorporating AI into your workflow' }]
+            {[{ logo: businessAnalLogo, title: 'Business analytics', description: 'Utilize our customized data analytics tools to enhance your business analytics', id: 'businessCard'},
+              { logo: myGif, title: 'Digital design', description: ' Create stunning web and mobile applications, including backend, tailored to your unique needs', id: 'digitalCard' },
+              { logo: phoneLogo, title: 'Automation', description: 'Automate time-consuming, mundane tasks to boost efficiency and productivity', id: 'automationCard' },
+              { logo: stocksLogo, title: 'AI solutions', description: ' Enhance your business and customer interactions by incorporating AI into your workflow', id: 'aICard' }]
               .map((item, index) => (
                 <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
                   <Card className={classes.cardTransparent}>
-                    <CardContent className={classes.cardContentFlex}>
+                    <CardContent className={classes.cardContentFlex} id={item.id}>
                       <CardMedia
                         component="img"
                         image={item.logo}

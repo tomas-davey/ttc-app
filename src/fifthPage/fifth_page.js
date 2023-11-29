@@ -3,7 +3,7 @@ import { Grid, makeStyles, Typography, Container  } from '@material-ui/core';
 import MyCardComponent from './card_component';
 import tom1_replacement from '../fifthPage/linkedin_profile.jpg'
 import tom2_replacement from '../fifthPage/tom_davey_linkedin_1.png'
-
+import FadeTextComponent from '../animations/scroll_fade';
 
 
 // Define styles using makeStyles
@@ -25,7 +25,11 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "center",
     },
   },
+  gridItem: {
+    opacity: 0,
+  },
   pageTitle: { // New style for the page title
+    opacity: 0,
     fontSize: '6rem',
     fontWeight: 'bold',
     color: 'transparent',
@@ -45,11 +49,12 @@ function FifthPage() {
   return (
     <>
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
+    <FadeTextComponent triggerClasses={[`.${classes.pageTitle}`, '#TomasDavey', '#ThomasAlhariri' ]} />
     <Typography variant="h2" className={classes.pageTitle}>
     MEET US
   </Typography>
     <Grid container spacing={5} className={classes.gridContainer}>
-          <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
+          <Grid item xs={12} sm={6} md={6} className={classes.gridItem} id="TomasDavey">
             <MyCardComponent
               img={tom2_replacement}
               title1="Tomas Davey"
@@ -57,7 +62,7 @@ function FifthPage() {
               text="A professional software engineer, working on projects ranging from an interactive AI robot to full stack app developlemt"
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
+          <Grid item xs={12} sm={6} md={6} className={classes.gridItem} id="ThomasAlhariri">
             <MyCardComponent
               img={tom1_replacement}
               title1="Thomas Al-Hariri"

@@ -22,7 +22,7 @@ const theme = createTheme({
 });
 
 function App() {
-  return (
+   return (
     <ThemeProvider theme={theme}>
       <div className='App'>
         <div>
