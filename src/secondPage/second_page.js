@@ -163,7 +163,7 @@ function SecondPageContent() {
       <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcstorageaccount.blob.core.windows.net/ttcmedia/ttc-laptop_11.mp4" starttrigger={'top 90%'} endtrigger={'bottom 50%'}/>
+          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcbucket.s3.eu-west-2.amazonaws.com/ttc-laptop_14.mp4" starttrigger={'top 90%'} endtrigger={'bottom 50%'}/>
 
         </Grid>
 

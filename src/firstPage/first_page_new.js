@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Typography, Grid  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import sample from './backgroundVideo.mp4';
+// import sample from './backgroundVideo.mp4';
 import CustomAppBar from '../navBar/navbar';
 const useStyles = makeStyles((theme) => ({
   bgBlur: {
@@ -119,7 +119,8 @@ const LandingPage = () => {
         ref={videoRef}
         className={classes.videoBg}
         style={{ height }}
-        src={sample}
+        src="https://ttcstorageaccount.blob.core.windows.net/ttcmedia/backgroundVideo.mp4"
+        preload='auto'
         type="video/mp4"
         autoPlay
         muted
@@ -138,7 +139,7 @@ const LandingPage = () => {
   </Grid>
   <Grid item xs={12}>
     <Typography className={classes.subText}>
-      Merging AI, data, and web development to boost businesses from barber shops to restaurants. Elevate with us.
+    Merging AI, data, and web development to boost businesses to the next level. Elevate with us.
     </Typography>
   </Grid>
 </Grid>

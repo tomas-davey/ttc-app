@@ -8,12 +8,8 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0 0 10px purple',
     border: '3px solid transparent',
     color: 'white',
-    // [theme.breakpoints.up('md')]: {
-    //   width: '40%'
-    //   },
-    // width: '100%',
-    width: '100%',
-    height: '100%',
+    maxWidth: '450px', // A standard width for cards that's not too large
+    margin: 'auto', // This will center the card in its container
     transition: 'all 0.3s ease-in-out',
     opacity: 0.85,
     '&:hover': {
@@ -24,7 +20,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    width: '100%',
+    width: '100%', // The image will scale with the card
+    height: 'auto', // Keep the image aspect ratio
+    borderRadius: '16px 16px 16px 16px', // Round only the top corners to match the card
   },
   title1: {
     marginTop: '10px',

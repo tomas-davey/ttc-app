@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SecondPageContent() {
   const classes = useStyles();
+  
   return (
     <Container sx={{ maxWidth:'100%'  }} maxWidth={false} className={`${classes.transparentBackground} ${classes.container}`}>
       <Grid container className={classes.root} spacing={2}>
@@ -105,7 +106,7 @@ function SecondPageContent() {
 
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcstorageaccount.blob.core.windows.net/ttcmedia/ttc-iphone_3.mp4" starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
+          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcbucket.s3.eu-west-2.amazonaws.com/ttc-iphone_3.mp4" starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
 
         </Grid>
 

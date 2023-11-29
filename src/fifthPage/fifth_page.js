@@ -54,7 +54,7 @@ function FifthPage() {
               img={tom2_replacement}
               title1="Tomas Davey"
               title="Co-Founder"
-              text="A professional software engineer, working on projects ranging from an AI robot to full stack app developlemt"
+              text="A professional software engineer, working on projects ranging from an interactive AI robot to full stack app developlemt"
             />
           </Grid>
           <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
