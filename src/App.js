@@ -1,11 +1,11 @@
 import './App.css';
 import SecondPageContent from './secondPage/second_page';  // Import the new component
-import FirstPage from './firstPage/first_page'
+// import FirstPage from './firstPage/first_page'
 import ThirdPage from './thirdPage/third_page';
 import ForthPage from './forthPage/forth_page';
 import FifthPage from './fifthPage/fifth_page';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import ShootingStar from './secondPage/ShootingStar';
+// import ShootingStar from './secondPage/ShootingStar';
 import LandingPage from './firstPage/first_page_new';
 
 const theme = createTheme({

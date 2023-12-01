@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Container, Typography, Grid  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 // import sample from './backgroundVideo.mp4';
-import CustomAppBar from '../navBar/navbar';
+// import CustomAppBar from '../navBar/navbar';
 const useStyles = makeStyles((theme) => ({
   bgBlur: {
       bottom: 0,
