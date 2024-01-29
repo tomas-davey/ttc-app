@@ -15,7 +15,7 @@ const FadeTextComponent = ({ triggerClasses }) => {
         // end: endTrigger,
         scrub: true,
         onEnter: () => {
-          gsap.to(`${triggerClass}`, { opacity: 1, duration: 1 });
+          gsap.to(`${triggerClass}`, { opacity: 1, duration: 0.8 });
           console.log(`UPDATE for ${triggerClass}`);
         },
       });
