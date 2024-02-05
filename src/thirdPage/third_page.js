@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // import spacemanImage from './Spaceman3.png'; 
 import ScrollVideo from '../animations/scroll_animations';
-import iphoneAnimation from '../animations/using_these/ttc-iphone_3.mp4';
+// import iphoneAnimation from '../animations/using_these/ttc-iphone_3.mp4';
 import FadeTextComponent from '../animations/scroll_fade';
 
 const useStyles = makeStyles((theme) => ({
@@ -112,8 +112,8 @@ function SecondPageContent() {
 
         <Grid item xs={12} md={5} className={classes.spacemanContainer}>
           {/* <img className={classes.spacemanImage} src={spacemanImage} alt="Spaceman floating" /> */}
-          {/* <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcbucket.s3.eu-west-2.amazonaws.com/ttc-iphone_3.mp4" starttrigger={'top 90%'} endtrigger={'bottom 80%'}/> */}
-          <ScrollVideo className={classes.spacemanImage} animation_location={iphoneAnimation} starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
+          <ScrollVideo className={classes.spacemanImage} animation_location="https://ttcbucket.s3.eu-west-2.amazonaws.com/ttc-iphone_3.mp4" starttrigger={'top 90%'} endtrigger={'bottom 80%'}/>
+          {/* <ScrollVideo className={classes.spacemanImage} animation_location={iphoneAnimation} starttrigger={'top 90%'} endtrigger={'bottom 80%'}/> */}
 
         </Grid>
 
