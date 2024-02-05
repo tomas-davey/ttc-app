@@ -9,7 +9,7 @@ import stocksLogo from './2nd_logos/stocks_logo.png';
 import myGif from './apple_android_animation.gif';
 // import Spline from '@splinetool/react-spline';
 import ScrollVideo from '../animations/scroll_animations';
-import laptopAnimation from '../animations/newest_animations/using_these/ttc-laptop_14.mp4';
+import laptopAnimation from '../animations/using_these/ttc-laptop_14.mp4';
 import FadeTextComponent from '../animations/scroll_fade';
 
 const useStyles = makeStyles((theme) => ({

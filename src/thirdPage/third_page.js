@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // import spacemanImage from './Spaceman3.png'; 
 import ScrollVideo from '../animations/scroll_animations';
-import iphoneAnimation from '../animations/newest_animations/using_these/ttc-iphone_3.mp4';
+import iphoneAnimation from '../animations/using_these/ttc-iphone_3.mp4';
 import FadeTextComponent from '../animations/scroll_fade';
 
 const useStyles = makeStyles((theme) => ({

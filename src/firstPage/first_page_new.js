@@ -4,7 +4,7 @@ import { Container, Typography, Grid  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import sample from './backgroundVideo.mp4';
 // import CustomAppBar from '../navBar/navbar';
-//hi
+
 const useStyles = makeStyles((theme) => ({
   bgBlur: {
       bottom: 0,
